@@ -47,7 +47,8 @@ const commentController = {
     )
       .then(dbPizzaData => res.json(dbPizzaData))
       .catch(err => res.json(err));
-  }
+  },
+  
   // remove comment
   removeComment({ params }, res) {
     Comment.findOneAndDelete({ _id: params.commentId })
